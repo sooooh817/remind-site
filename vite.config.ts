@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: './',  // ← これを追加！相対パスで読み込む設定
   build: {
-    outDir: 'dist', // ここで「dist」というフォルダに出すよう強制します
+    outDir: 'dist',
   }
 })
