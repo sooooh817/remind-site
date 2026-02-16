@@ -24,10 +24,10 @@ export const Profile: React.FC = () => {
             {/* Qualifications */}
             <div className="flex flex-col gap-3 mb-8 w-full items-center">
               <span className="px-5 py-1.5 bg-sageGreen/10 rounded-full text-xs text-deepSage font-bold border border-sageGreen/20 shadow-sm">
-                メンタルヘルス・マネジメント検定Ⅰ種
+                メンタルヘルス・マネジメント検定Ⅰ種　取得
               </span>
               <span className="px-5 py-1.5 bg-sageGreen/10 rounded-full text-xs text-deepSage font-bold border border-sageGreen/20 shadow-sm">
-                メンタルヘルス・マネジメント検定Ⅱ種
+                メンタルヘルス・マネジメント検定Ⅱ種　取得
               </span>
             </div>
 
