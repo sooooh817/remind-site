@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
             For Staff
           </p>
           <h2 className="text-3xl font-bold leading-relaxed text-deepSage font-sans tracking-wider">
-            スタッフのための、<br />
+            スタッフのための<br />
             心の休息所
           </h2>
         </div>
