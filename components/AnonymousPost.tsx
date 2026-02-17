@@ -14,12 +14,6 @@ export const AnonymousPost: React.FC = () => {
     e.preventDefault();
     if (!text.trim()) return;
     
-    // URLが設定されていない場合の警告（開発用）
-    if (GAS_API_URL === "YOUR_GAS_WEB_APP_URL_HERE") {
-      alert("エラー: Google Apps ScriptのURLが設定されていません。コード内の GAS_API_URL を更新してください。");
-      return;
-    }
-
     setIsSending(true);
     
     try {
@@ -64,9 +58,10 @@ export const AnonymousPost: React.FC = () => {
         <h3 className="text-2xl font-serif italic text-deepSage mb-4">Letter</h3>
         
         <p className="text-[13px] text-darkGray/70 font-medium leading-7 tracking-wide">
-          今は誰とも話したくないけれど、<br/>
-          このモヤモヤだけはどこかに置いていきたい。<br/>
-          そんな時は、ここに手紙を置いていってください。
+          誰とも話したくないけれど、<br/>
+          このモヤモヤだけは吐き出したい。<br/>
+          そんな時はここに手紙を置いていって<br/>ください。<br/>
+          手紙は管理者にのみ届きます。
         </p>
       </div>
 

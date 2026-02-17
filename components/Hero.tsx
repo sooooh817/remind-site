@@ -18,8 +18,8 @@ export const Hero: React.FC = () => {
         {/* Sub-text */}
         <div className="opacity-0 animate-fade-in-up-delay-2 max-w-xs mx-auto">
             <p className="text-[15px] text-darkGray/80 leading-8 font-medium">
-              対人疲れ、将来の不安。<br />
-              日々の悩みを、<br/>ここで少し話しませんか？
+              日々のノイズを遠ざけて<br/>
+              ほっとひと息<br/>心に余白を取り戻す
             </p>
         </div>
       </div>

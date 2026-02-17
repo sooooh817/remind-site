@@ -23,7 +23,7 @@ export const Concept: React.FC = () => {
           <p className="text-[14px] leading-7 text-darkGray/80">
             わたしもあなたも<br/>上司への報告義務はありません。<br/>
             完全に守秘義務が守られた、<br/>
-            あなただけの安全地帯です。
+            あなただけのセーフティゾーンです。
           </p>
         </div>
       </div>
