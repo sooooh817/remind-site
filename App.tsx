@@ -9,29 +9,33 @@ import { Footer } from './components/Footer';
 import { BackgroundElements } from './components/BackgroundElements';
 import { Breath } from './components/Breath';
 import { Topics } from './components/Topics';
+import { AnonymousPost } from './components/AnonymousPost';
 import { Gamepad2 } from 'lucide-react';
 
 export default function App() {
-  // タブの状態管理 ('home' か 'relax' か)
-  const [activeTab, setActiveTab] = useState<'home' | 'relax'>('home');
+  // タブの状態管理 ('home' | 'relax' | 'letter')
+  const [activeTab, setActiveTab] = useState<'home' | 'relax' | 'letter'>('home');
 
   // ナビゲーション設定
   const homeTabs = [
     { id: 'about', label: 'About' },
     { id: 'profile', label: 'Profile' },
     { id: 'location', label: 'Access' },
+    { id: 'letter', label: 'Letter' },
   ];
 
   const relaxTabs = [
     { id: 'breath', label: 'Breath' },
     { id: 'topics', label: 'Topics' },
     { id: 'game', label: 'Game' },
+    { id: 'letter', label: 'Letter' },
   ];
 
   return (
     // min-h-screen ensures full height. 
     // bg-transparent allows fixed background to show through.
-    <div className="relative min-h-screen font-sans text-darkGray selection:bg-sageGreen selection:text-white pb-20">
+    // overflow-x-hidden acts as a safeguard.
+    <div className="relative min-h-screen w-full overflow-x-hidden font-sans text-darkGray selection:bg-sageGreen selection:text-white pb-20">
       
       {/* Decorative Background (Fixed at lowest z-index) */}
       <BackgroundElements />
@@ -40,13 +44,14 @@ export default function App() {
       <div className="fixed inset-0 pointer-events-none z-[-40] bg-noise opacity-[0.03]"></div>
 
       {/* Main Content Container (Relative z-10 to sit above background) */}
-      <main className="relative z-10 max-w-lg mx-auto min-h-screen flex flex-col">
+      <main className="relative z-10 max-w-lg mx-auto min-h-screen flex flex-col w-full">
         {/* Header with Top-Right Switcher */}
         <Header activeTab={activeTab} setActiveTab={setActiveTab} />
         
         {/* Scroll Navigation (Context aware) */}
         {activeTab === 'home' && <Navigation tabs={homeTabs} />}
         {activeTab === 'relax' && <Navigation tabs={relaxTabs} />}
+        {/* 'letter' tab does not need scroll navigation as it's a single screen */}
         
         <div className="flex flex-col gap-20 px-8 py-8 min-h-[80vh]">
           
@@ -65,6 +70,11 @@ export default function App() {
               
               <div id="location" className="scroll-mt-32">
                 <Access />
+              </div>
+
+              {/* Anonymous Post at the bottom */}
+              <div id="letter" className="scroll-mt-32">
+                 <AnonymousPost />
               </div>
             </div>
           )}
@@ -113,8 +123,29 @@ export default function App() {
                  </div>
               </div>
 
+              {/* Anonymous Post at the bottom */}
+              <div id="letter" className="scroll-mt-32">
+                 <AnonymousPost />
+              </div>
+
             </div>
           )}
+
+          {/* === LETTER TAB CONTENT === */}
+          {activeTab === 'letter' && (
+             <div className="animate-fade-in-up flex flex-col items-center justify-center min-h-[60vh] gap-8">
+               <div className="text-center">
+                  <h2 className="text-3xl font-serif italic text-deepSage mb-2">Letter</h2>
+                  <p className="text-xs text-darkGray/60 font-medium tracking-wide">
+                    言葉にして、手放す。
+                  </p>
+               </div>
+               <div className="w-full">
+                  <AnonymousPost />
+               </div>
+             </div>
+          )}
+
         </div>
 
         <Footer />

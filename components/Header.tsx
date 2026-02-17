@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface HeaderProps {
-  activeTab?: 'home' | 'relax';
-  setActiveTab?: (tab: 'home' | 'relax') => void;
+  activeTab?: 'home' | 'relax' | 'letter';
+  setActiveTab?: (tab: 'home' | 'relax' | 'letter') => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
@@ -58,6 +58,19 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
             }`}
           >
             Relax
+          </button>
+
+          <span className="text-darkGray/20 text-[10px] font-light">/</span>
+
+          <button
+            onClick={() => setActiveTab('letter')}
+            className={`text-[11px] font-serif italic transition-all duration-300 ${
+              activeTab === 'letter' 
+                ? 'text-deepSage font-bold' 
+                : 'text-darkGray/40 hover:text-sageGreen'
+            }`}
+          >
+            Letter
           </button>
         </div>
       )}
