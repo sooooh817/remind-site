@@ -3,7 +3,7 @@ import { Send, Mail, CheckCircle2 } from 'lucide-react';
 
 // TODO: ここに発行されたGoogle Apps ScriptのウェブアプリURLを貼り付けてください
 // 例: "https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxxxxxxx/exec"
-const GAS_API_URL = "https://script.google.com/macros/s/AKfycbxUgm5LBbEqU2U6hG-d9glUMvR4g1eoDhslKNu98rh-2CDy4NpLan9-6JMU1E2JhbJy/exec";
+const GAS_API_URL = "https://script.google.com/macros/s/AKfycbxlUaj7u6zaGbLRJo7SR18L3FrQ6wT4VkbFPq8afVUOsEoBCSWRsIG98yGomcs0Oy5V/exec";
 
 export const AnonymousPost: React.FC = () => {
   const [text, setText] = useState('');
