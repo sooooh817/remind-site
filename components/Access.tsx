@@ -16,7 +16,7 @@ export const Access: React.FC = () => {
             <MapPin className="text-deepSage w-8 h-8" strokeWidth={1.5} />
           </div>
           <p className="text-2xl font-bold text-darkGray tracking-wider font-['Zen_Maru_Gothic']">
-            ST室①
+            1F相談室
           </p>
         </div>
 

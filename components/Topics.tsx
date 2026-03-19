@@ -9,9 +9,9 @@ export const Topics: React.FC = () => {
     { id: 4, icon: '🐱', title: '癒しの動物動画チャンネル', desc: '最近AIで動物が喋るやつがあるよね' },
     { id: 5, icon: '👀', title: '経済状況', desc: '円安物価高真っ最中' },
     { id: 6, icon: '📱', title: 'スマホに入れている「逃げ場所」', desc: 'ポケモンスリープ' },
-    { id: 7, icon: '🎵', title: '最近聴いてるプレイリスト', desc: '自作作業用Lo-fi' },
+    { id: 7, icon: '🎵', title: '最近聴いてるプレイリスト', desc: 'apple musicランダム再生' },
     { id: 8, icon: '🎁', title: '最近買ってよかったQOL向上グッズ', desc: 'イヤーウォーマー' },
-    { id: 9, icon: '🌸', title: '気になるイベント', desc: 'ポケモン30周年' },
+    { id: 9, icon: '🌸', title: '気になるイベント', desc: 'IMAGINUS科学体験ラボ' },
   ];
 
   return (
